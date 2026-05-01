@@ -1,0 +1,156 @@
+/* ===================================================================
+   style.css  —  Purchase Order Approval Workflow
+   =================================================================== */
+
+:root {
+  --status-draft:    #6c757d;
+  --status-pending:  #ffc107;
+  --status-approved: #198754;
+  --status-rejected: #dc3545;
+  --status-completed:#0d6efd;
+}
+
+/* ---- Body ---- */
+body {
+  background-color: #f0f4f8;
+  font-size: 0.9rem;
+}
+
+/* ---- Workflow banner ---- */
+.workflow-banner {
+  background: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.badge-step {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ---- PO list ---- */
+.po-list {
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.po-item {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0.85rem 1rem;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.po-item:last-child {
+  border-bottom: none;
+}
+
+.po-item:hover {
+  background: #f8f9fa;
+}
+
+.po-empty {
+  padding: 2rem;
+  text-align: center;
+  color: #adb5bd;
+}
+
+/* ---- Status badges ---- */
+.status-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.status-DRAFT           { background: #e9ecef; color: #495057; }
+.status-PENDING_APPROVAL{ background: #fff3cd; color: #856404; }
+.status-APPROVED        { background: #d1e7dd; color: #0f5132; }
+.status-REJECTED        { background: #f8d7da; color: #842029; }
+.status-COMPLETED       { background: #cfe2ff; color: #084298; }
+
+/* ---- Notification dropdown ---- */
+.notif-dropdown {
+  width: 340px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.notif-item {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.82rem;
+}
+
+.notif-item:last-child {
+  border-bottom: none;
+}
+
+.notif-item.unread {
+  background: #eff6ff;
+  border-left: 3px solid #0d6efd;
+}
+
+/* ---- History timeline ---- */
+.history-timeline {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.history-timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dee2e6;
+}
+
+.history-step {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.history-step::before {
+  content: "";
+  position: absolute;
+  left: -1.12rem;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0d6efd;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #0d6efd;
+}
+
+.history-step:last-child {
+  padding-bottom: 0;
+}
+
+/* ---- Cards ---- */
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  border-radius: 10px 10px 0 0 !important;
+  font-size: 0.9rem;
+}
+
+/* ---- PO Detail ---- */
+.po-number-badge {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+/* ---- Spinner overlay ---- */
+.btn .spinner-border-sm {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-width: 0.13em;
+}
