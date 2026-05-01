@@ -1,0 +1,18 @@
+# Python byte-compiled / optimised / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Flask / app artefacts
+instance/
+*.log
+
+# OS artefacts
+.DS_Store
+Thumbs.db
